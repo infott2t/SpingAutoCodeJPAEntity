@@ -1,6 +1,9 @@
 package v2;
 
 import javax.swing.*;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 
 public class ResultEntityScreen extends JFrame{
 
@@ -72,7 +75,8 @@ public class ResultEntityScreen extends JFrame{
         System.out.println("String, colPrintComma, ... : "+colPrintComma);
 
 
-        jta.setText("" +
+
+         jta.setText("" +
                 "" +
                 "\n" +
                 "\n" +
@@ -116,5 +120,20 @@ public class ResultEntityScreen extends JFrame{
                 "\n" +
                 "}\n" +
                 "}");
+
+        String code = jta.getText();
+        try {
+            File file = new File("C:\\category\\" + usc.getClassNameTables() + ".java");
+            if (!file.exists()) {
+                file.createNewFile();
+            }
+
+            FileWriter fw = new FileWriter(file);
+            BufferedWriter writer = new BufferedWriter(fw);
+            writer.write(code);
+            writer.close();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
     }
 }
