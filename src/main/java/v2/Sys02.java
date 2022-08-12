@@ -26,7 +26,7 @@ public class Sys02 extends JFrame{
         jtf2 = new JTextField(30);
         jl5 = new JLabel("칼럼명: LocalDateTime인 경우. , 로 구분");
         jtf3 = new JTextField(30);
-        jl6 = new JLabel("@Table(name=). ex SH_BOARD_TB");
+        jl6 = new JLabel("@Table(name=). ex 실제 데이터 베이스 테이블 이름");
         jtf4 = new JTextField(20);
         jl7 = new JLabel("저장할 위치. 적지 않을 경우, c:\\category");
         jtf5 = new JTextField(20);
